@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+     >
+    
+   <RelativeLayout android:id="@+id/topbarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+       android:orientation="horizontal" android:background="@drawable/topbg">
+       <Button android:id="@+id/backButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dip"
+           android:background="@drawable/back_button" android:layout_centerVertical="true" android:layout_marginTop="10dip"></Button>
+       <TextView android:id="@+id/titleView" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="明细列表" android:layout_centerInParent="true" android:textSize="18dip" android:textColor="@color/white"/>
+   </RelativeLayout> 
+   
+   <RelativeLayout android:id="@+id/bgLayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+        >
+       
+       <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical">
+           
+        <com.dhc.pos.activity.view.TopInfoView  android:layout_width="fill_parent" android:layout_height="wrap_content" 
+	            android:id="@+id/topInfoView"/>
+        
+        <ListView android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:padding="5dip" android:layout_marginLeft="8dip" android:layout_marginRight="8dip" android:layout_marginBottom="20dip"
+		android:id="@+id/transList" android:dividerHeight="0px"
+		android:cacheColorHint="#00000000" android:divider="@drawable/listdivider"  android:scrollbars="none" android:choiceMode="singleChoice" />
+        
+       </LinearLayout>
+       
+       <com.dhc.pos.activity.view.PaginationView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:id="@+id/pager" android:layout_alignParentBottom="true"
+		android:visibility="gone"/>
+       
+   </RelativeLayout>        
+
+</LinearLayout>

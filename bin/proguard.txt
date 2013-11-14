@@ -1,0 +1,192 @@
+# view hdpi/res/layout-hdpi/random_pwd_keyboardview.xml #generated:7
+-keep class android.inputmethodservice.KeyboardView { <init>(...); }
+
+# view AndroidManifest.xml #generated:52
+-keep class com.dhc.pos.POS2AndroidApplication { <init>(...); }
+
+# view AndroidManifest.xml #generated:344
+-keep class com.dhc.pos.activity.AboutActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:279
+-keep class com.dhc.pos.activity.AddPayeeAccountActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:247
+-keep class com.dhc.pos.activity.AnnouncementDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:239
+-keep class com.dhc.pos.activity.AnnouncementListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:287
+-keep class com.dhc.pos.activity.BankTransferInputActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:56
+-keep class com.dhc.pos.activity.BootBroadcastReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:131
+-keep class com.dhc.pos.activity.ContactsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:112
+-keep class com.dhc.pos.activity.DynamicActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:336
+-keep class com.dhc.pos.activity.FeedbackActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:174
+-keep class com.dhc.pos.activity.FindPasswordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:320
+-keep class com.dhc.pos.activity.HandSignActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:303
+-keep class com.dhc.pos.activity.InputMoneyActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:123
+-keep class com.dhc.pos.activity.LRCatalogActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:141
+-keep class com.dhc.pos.activity.LoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:328
+-keep class com.dhc.pos.activity.MobileChargeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:271
+-keep class com.dhc.pos.activity.PayeeAccountListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:199
+-keep class com.dhc.pos.activity.QueryReceiptDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:191
+-keep class com.dhc.pos.activity.QueryReceiptListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:183
+-keep class com.dhc.pos.activity.QueryReversalListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:207
+-keep class com.dhc.pos.activity.QueryTransferHistoryActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:231
+-keep class com.dhc.pos.activity.QueryTransferHistoryDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:215
+-keep class com.dhc.pos.activity.QueryTransferHistoryGroupActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:223
+-keep class com.dhc.pos.activity.QueryTransferHistoryListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:312
+-keep class com.dhc.pos.activity.ReceiptActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:263
+-keep class com.dhc.pos.activity.RevokeTransConfirmActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:255
+-keep class com.dhc.pos.activity.RevokeTransListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:158
+-keep class com.dhc.pos.activity.SettlementSuccessActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:150
+-keep class com.dhc.pos.activity.ShowBalanceActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:103
+-keep class com.dhc.pos.activity.SplashActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:85
+-keep class com.dhc.pos.activity.TimeoutService { <init>(...); }
+
+# view AndroidManifest.xml #generated:295
+-keep class com.dhc.pos.activity.TrafficStatusActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:166
+-keep class com.dhc.pos.activity.TransferSuccessWithSendSmsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:91
+-keep class com.dhc.pos.activity.UpdateAPKService { <init>(...); }
+
+# view AndroidManifest.xml #generated:97
+-keep class com.dhc.pos.activity.UploadSignImageService { <init>(...); }
+
+# view hdpi/res/layout-hdpi/banktransfer_input.xml #generated:99
+-keep class com.dhc.pos.activity.view.InputAmountWithUpperView { <init>(...); }
+
+# view hdpi/res/layout-hdpi/banktransfer_input.xml #generated:128
+# view hdpi/res/layout-hdpi/findpassword.xml #generated:124
+# view hdpi/res/layout-hdpi/mobile_recharge.xml #generated:133
+# view hdpi/res/layout-hdpi/print_receipt.xml #generated:83
+# view hdpi/res/layout-hdpi/queryhistory.xml #generated:82
+# view hdpi/res/layout-hdpi/record_device.xml #generated:81
+# view hdpi/res/layout-hdpi/revoke_trans_confirm.xml #generated:223
+# view hdpi/res/layout-hdpi/traffic_status.xml #generated:228
+-keep class com.dhc.pos.activity.view.InstructionsForUseView { <init>(...); }
+
+# view hdpi/res/layout-hdpi/trans_list.xml #generated:32
+-keep class com.dhc.pos.activity.view.PaginationView { <init>(...); }
+
+# view hdpi/res/layout-hdpi/findpassword.xml #generated:72
+# view hdpi/res/layout-hdpi/findpassword.xml #generated:79
+# view hdpi/res/layout-hdpi/queryhistory.xml #generated:61
+# view hdpi/res/layout-hdpi/revoke_trans_confirm.xml #generated:202
+-keep class com.dhc.pos.activity.view.PasswordWithLabelView { <init>(...); }
+
+# view hdpi/res/layout-hdpi/queryhistory.xml #generated:56
+-keep class com.dhc.pos.activity.view.PickerDateView { <init>(...); }
+
+# view hdpi/res/layout-hdpi/login.xml #generated:45
+-keep class com.dhc.pos.activity.view.PwdWithLabelView { <init>(...); }
+
+# view hdpi/res/layout-hdpi/lr_catalog.xml #generated:102
+-keep class com.dhc.pos.activity.view.SlidingDrawerEx { <init>(...); }
+
+# view hdpi/res/layout-hdpi/add_payeeaccount.xml #generated:60
+# view hdpi/res/layout-hdpi/add_payeeaccount.xml #generated:68
+# view hdpi/res/layout-hdpi/add_payeeaccount.xml #generated:75
+# view hdpi/res/layout-hdpi/add_payeeaccount.xml #generated:82
+# view hdpi/res/layout-hdpi/banktransfer_input.xml #generated:105
+# view hdpi/res/layout-hdpi/feedback.xml #generated:85
+# view hdpi/res/layout-hdpi/findpassword.xml #generated:59
+# view hdpi/res/layout-hdpi/findpassword.xml #generated:65
+# view hdpi/res/layout-hdpi/findpassword.xml #generated:99
+# view hdpi/res/layout-hdpi/handsign.xml #generated:72
+# view hdpi/res/layout-hdpi/input_amount_with_upper.xml #generated:8
+# view hdpi/res/layout-hdpi/mobile_recharge.xml #generated:64
+# view hdpi/res/layout-hdpi/mobile_recharge.xml #generated:80
+# view hdpi/res/layout-hdpi/record_device.xml #generated:60
+# view hdpi/res/layout-hdpi/transfersuccess_sendsms.xml #generated:243
+-keep class com.dhc.pos.activity.view.TextWithLabelView { <init>(...); }
+
+# view hdpi/res/layout-hdpi/about.xml #generated:41
+# view hdpi/res/layout-hdpi/add_payeeaccount.xml #generated:44
+# view hdpi/res/layout-hdpi/banktransfer_input.xml #generated:41
+# view hdpi/res/layout-hdpi/contacts.xml #generated:14
+# view hdpi/res/layout-hdpi/feedback.xml #generated:40
+# view hdpi/res/layout-hdpi/findpassword.xml #generated:41
+# view hdpi/res/layout-hdpi/mobile_recharge.xml #generated:40
+# view hdpi/res/layout-hdpi/payeeaccount_list.xml #generated:44
+# view hdpi/res/layout-hdpi/print_receipt.xml #generated:40
+# view hdpi/res/layout-hdpi/queryhistory.xml #generated:40
+# view hdpi/res/layout-hdpi/queryhistory_detail.xml #generated:33
+# view hdpi/res/layout-hdpi/record_device.xml #generated:48
+# view hdpi/res/layout-hdpi/revoke_trans_confirm.xml #generated:48
+# view hdpi/res/layout-hdpi/revoke_trans_list.xml #generated:40
+# view hdpi/res/layout-hdpi/settlementsuccess.xml #generated:34
+# view hdpi/res/layout-hdpi/show_balance.xml #generated:39
+# view hdpi/res/layout-hdpi/traffic_status.xml #generated:47
+# view hdpi/res/layout-hdpi/trans_list.xml #generated:22
+# view hdpi/res/layout-hdpi/transfersuccess_sendsms.xml #generated:34
+-keep class com.dhc.pos.activity.view.TopInfoView { <init>(...); }
+
+# view res/layout/beginnerguide.xml #generated:15
+-keep class com.dhc.pos.activity.view.viewflow.CircleFlowIndicator { <init>(...); }
+
+# view res/layout/beginnerguide.xml #generated:9
+-keep class com.dhc.pos.activity.view.viewflow.ViewFlow { <init>(...); }
+
+# view AndroidManifest.xml #generated:78
+-keep class com.dhc.pos.fsk.FSKService { <init>(...); }
+
+# view AndroidManifest.xml #generated:74
+-keep class org.androidpn.client.NotificationDetailsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:65
+-keep class org.androidpn.client.NotificationService { <init>(...); }
+
