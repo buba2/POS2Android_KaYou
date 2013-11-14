@@ -13,7 +13,7 @@
 	<classpathentry exported="true" kind="lib" path="libs/locSDK1.0.4.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/mail.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/j8583-1.5.4.jar"/>
-	<classpathentry kind="src" path="gen"/>
 	<classpathentry exported="true" kind="lib" path="libs/dom4j-1.6.jar"/>
+	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
