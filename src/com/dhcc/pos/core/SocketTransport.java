@@ -41,8 +41,8 @@ public class SocketTransport {
 	byte[] respMsg = null;
 
 	public SocketTransport() {
-		this.host = "58.221.92.138";
-		this.port = 9090;
+		this.host = "124.127.191.101";
+		this.port = 6051;
 		this.timeout = 45000;
 		this.headlength = 12;
 	}

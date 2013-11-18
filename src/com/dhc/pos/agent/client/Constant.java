@@ -17,6 +17,9 @@ public class Constant {
 	// 服务器下载图片保存路径
 	public static final String IMAGEPATH					= APPFILEPATH + "/images/";
 	
+	/**工作密钥保存路径*/
+	public static final String F62	= APPFILEPATH + "/assets/";
+	
 	// HTTP   220.194.44.216
 	public static String XMLURL = "http://58.221.92.138:9999";
 	public static String JSONURL = "http://58.221.92.138:9999";

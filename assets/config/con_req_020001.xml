@@ -21,7 +21,7 @@
 	<field key="field42" value="__VENDOR"  />
 	<field key="field49" value="156" />
 	<field key="field52" value="__PSAMPIN" /><!-- 个人PIN，受约束项 -->
-	<field key="field60" value="01#__BATCHNUM#" />
+	<field key="field60" value="01#__BATCHNUM000521#" />
 	<field key="field64" value="00000000" />
 	
 </root>

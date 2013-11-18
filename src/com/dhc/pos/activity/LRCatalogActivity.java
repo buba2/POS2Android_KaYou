@@ -121,11 +121,12 @@ public class LRCatalogActivity extends BaseActivity implements OnItemClickListen
 	    
 	    
 	    try{
-//	    	Event event = new Event(null,"transfer", null);
+	    	Event event = new Event(null,"transfer", null);
 //	        String fskStr = "Get_MAC|int:0,int:1,string:null,string:F133D6A3AF9014AB";
-////	    	String fskStr = "Get_RenewVendorTerID|string:195300430101001,string:19530024";
-//	        event.setFsk(fskStr);
-//	        event.trigger();
+//	    	String fskStr = "Get_RenewVendorTerID|string:195300430101001,string:19530024";
+	    	String fskStr = "Get_RenewVendorTerID|string:105360170110159,string:00021679";
+	        event.setFsk(fskStr);
+	        event.trigger();
 	        
 	    }catch(Exception e){
 	    	

@@ -2,6 +2,7 @@ package com.dhc.pos.agent.client;
 
 import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
+import java.security.Key;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,6 +23,8 @@ import com.dhc.pos.model.TransferModel;
 import com.dhc.pos.util.StringUtil;
 import com.dhcc.pos.core.SocketTransport;
 import com.dhcc.pos.core.TxActionImp;
+import com.dhcc.pos.packets.util.FileUtil;
+import com.dhcc.pos.packets.util.PMAC;
 import com.itron.protol.android.CommandReturn;
 
 /**
@@ -30,6 +33,8 @@ import com.itron.protol.android.CommandReturn;
  */
 
 public class TransferPacketThread extends Thread {
+	boolean isWrite = false;
+	
 	byte[] respByte = null;
 	private String transferCode; // 交易码
 	private TransferModel transferModel;
@@ -193,6 +198,26 @@ public class TransferPacketThread extends Thread {
 			HashMap<String, Object> respMap = action.afterProcess(respByte);
 
 			receiveFieldMap = new HashMap<String, String>();
+			
+			
+			/** ==========记录工作密钥到文件 ==========*/
+			if(isWrite){
+				String field62 = null;
+				String tempF62 = null;
+				if(respMap.get("fieldTransType").equals("0800") && respMap.get("39").equals("00")){
+					field62 = (String) respMap.get("field62");
+					FileUtil.writeFile(Constant.F62, "f62", field62, false);
+				
+					tempF62 = FileUtil.readerFile(Constant.F62, "f62", 1);
+				
+					System.out.println("tempF62【" + tempF62 + "】");
+				}
+			}
+			
+			/**====================*/
+			
+			
+			
 			for (String key : respMap.keySet()) {
 				this.receiveFieldMap.put(key, (String) respMap.get(key));
 			}
@@ -302,7 +327,51 @@ public class TransferPacketThread extends Thread {
 						System.arraycopy(sendByte, 0, tempByte, 0, sendByte.length - 8);
 						System.arraycopy(cmdReturn.Return_PSAMMAC, 0, tempByte, tempByte.length - 8, 8);
 
-						
+						sendByte = tempByte;
+						sendPacket();
+
+					} catch (IllegalStateException e) {
+						e.printStackTrace();
+					}
+
+				} else { // mac计算失败
+					BaseActivity.getTopActivity().showDialog(BaseActivity.MODAL_DIALOG, "加密数据时出现异常，请重试.");
+				}
+
+				break;
+			}
+		}
+		
+//		@Override
+		public void _handleMessage(Message msg) {
+			String f62 = null;
+			
+			/**密文mackey*/
+			String cipherMacKey = null;
+			
+			/**明文mackey*/
+			byte[] plainMacKey = null;
+			/**mac 校验值*/
+			String checkValue = null;
+			
+			PMAC pMac = null;
+		
+			/**主密钥，mac密钥*/
+			Key masterKey,macKey;
+			
+			/**明文masterKey*/
+//			String _masterKey = "0123456789ABCDEF0123456789ABCDEF";
+			String _masterKey = "F415DA6DC7E507491973A72C7649EF94";
+			
+			switch (msg.what) {
+			case 0:
+				CommandReturn cmdReturn = (CommandReturn) msg.obj;
+				if (cmdReturn.Return_Result == 0) { // mac计算成功
+					try {
+						byte[] tempByte = new byte[sendByte.length];
+						System.arraycopy(sendByte, 0, tempByte, 0, sendByte.length - 8);
+						System.arraycopy(cmdReturn.Return_PSAMMAC, 0, tempByte, tempByte.length - 8, 8);
+
 						sendByte = tempByte;
 						sendPacket();
 

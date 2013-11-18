@@ -126,6 +126,7 @@ public class TxActionImp {
 												+ " 域 is must input! ");
 							} else if (value.toString().length() != xfield
 									.getLength()) {
+								System.out.println("@@:" + fieldId+":" + value.toString());
 								if (value.toString().length() < xfield
 										.getLength()) {
 									throw new IllegalArgumentException(
@@ -296,6 +297,9 @@ public class TxActionImp {
 			}
 
 			System.out.println("\rResp_json:\r" + resp_byte + "\r");
+			
+			System.out.println("################################################################################");
+			System.out.println("相应报文：==》" + resp_map);
 
 		} catch (NullPointerException e) {
 			throw new NullPointerException();
