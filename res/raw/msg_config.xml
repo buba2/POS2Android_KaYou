@@ -2,7 +2,7 @@
 <j8583cn-config>
 	<header tpduLength="10" headerLength="12">0100</header>
 	<header tpduLength="10" headerLength="12">0110</header>
-	
+	 
 	<!-- -->
 	<header tpduLength="10" headerLength="12">0200</header>
 	<header tpduLength="10" headerLength="12">0210</header>
@@ -146,6 +146,31 @@
 		<field id="64" datatype="LLLVAR" />
 	</parseinfo>
 	
+	<!--  自定义 登录交易-->
+	<parseinfo msgtypeid="0860">
+		<field id="11" datatype="NUMERIC" length="6"  isOk="true"/>
+		<field id="60" datatype="LLLNVAR" isOk="true"/> 
+		<field id="63" datatype="LLLVAR"/> 
+	</parseinfo>
+	
+	<parseinfo msgtypeid="0870">
+		<field id="11" datatype="NUMERIC" length="6" />
+		<field id="12" datatype="TIME" />
+		<field id="13" datatype="DATE4" />
+		<field id="32" datatype="LLNVAR" />
+		<field id="37" datatype="ALPHA" length="12" />
+		<field id="39" datatype="ALPHA" length="2" />
+		<field id="41" datatype="ALPHA" length="8" />
+		<field id="42" datatype="ALPHA" length="15" />
+		<field id="43" datatype="ALPHA" length="40" />
+		<field id="60" datatype="LLLNVAR" /> 
+		<field id="61" datatype="LLLVAR" /> 
+		<!-- 当39域为“00”时必选，为24字节的PIK和MAK -->
+		<field id="62" datatype="LLLVAR" />
+		<field id="63" datatype="LLLVAR" />
+	</parseinfo>
+
+	
 	<parseinfo msgtypeid="0800">
 		<field id="11" datatype="NUMERIC" length="6"  isOk="true"/>
 		<field id="13" datatype="DATE4" isOk="false"/>
@@ -154,7 +179,7 @@
 		<field id="44" datatype="LLVAR" length="20" />
 		<!-- <field id="60" datatype="LLLVAR" /> -->
 		<field id="60" datatype="LLLNVAR" isOk="true"/> 
-		<field id="63" datatype="LLLVAR" length="3"/> 
+		<field id="63" datatype="LLLVAR" /> 
 	</parseinfo>
 	
 	<parseinfo msgtypeid="0810">
@@ -171,7 +196,7 @@
 		<field id="61" datatype="LLLVAR" /> 
 		<!-- 当39域为“00”时必选，为24字节的PIK和MAK -->
 		<field id="62" datatype="LLLVAR" />
-		<field id="63" datatype="LLLNVAR" />
+		<field id="63" datatype="LLLVAR" />
 	</parseinfo>
 	
 	
